@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../images/cartoon-2614618_1920.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.walking{
+    background-image: url(../images/walk-png-pic.png);
+    width: 184px;
+    height: 325px;
+    position: absolute;
+    top: 210px;
+    animation: walk 1s steps(8) infinite, walking 10s linear infinite;
+    z-index: 3;
+}
+@keyframes walk{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1472px;
+    }
+}
+@keyframes walking{
+    0%{
+        transform: translateX(-250px);
+    }
+    100%{
+        transform: translateX(1600px);
+    }
+}
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 80vh;
+    z-index: -1;
+}
